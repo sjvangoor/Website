@@ -49,21 +49,45 @@
     </header>
     <main>
       <section class="section">
-        <ul class="skills-list">
-          <li>HTML &amp; CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li data-i18n="skill-uiux">UI/UX Design</li>
-        </ul>
-        <p data-i18n="skills-text1">
-          Version control with Git keeps projects organized, while build tools
-          like Webpack streamline deployment.
-        </p>
-        <p data-i18n="skills-text2">
-          Stan also relies on Figma and Sketch to translate concepts into
-          polished interfaces and accessible user flows.
-        </p>
+        <div class="skill-switcher">
+          <div class="switcher-buttons">
+            <button class="switch-btn active" data-skill="tech">Technical</button>
+            <button class="switch-btn" data-skill="design">Design</button>
+            <button class="switch-btn" data-skill="strategy">Strategy</button>
+          </div>
+          <div class="switcher-content">
+            <div class="skill-panel active" data-skill="tech">
+              <div class="icon" aria-hidden="true">💻</div>
+              <ul class="skills-list">
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript &amp; Node.js</li>
+                <li>React (component-based)</li>
+                <li>Git &amp; version control</li>
+                <li>Build tools (Webpack &amp; Vite)</li>
+                <li>API integrations (Meta, LinkedIn, Google Ads)</li>
+                <li>MySQL &amp; Python scraping</li>
+              </ul>
+            </div>
+            <div class="skill-panel" data-skill="design">
+              <div class="icon" aria-hidden="true">🎨</div>
+              <ul class="skills-list">
+                <li>UI/UX fundamentals</li>
+                <li>Figma &amp; Sketch workflows</li>
+                <li>User focused flows</li>
+                <li>Branding meets interaction</li>
+              </ul>
+            </div>
+            <div class="skill-panel" data-skill="strategy">
+              <div class="icon" aria-hidden="true">📊</div>
+              <ul class="skills-list">
+                <li>Marketing data analysis</li>
+                <li>Power BI &amp; Looker Studio</li>
+                <li>Dashboard building &amp; KPIs</li>
+                <li>Tech strength with brand strategy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="contact-cta">
         <a href="contact.html" class="btn" data-i18n="contact-me">Contact me</a>

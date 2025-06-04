@@ -316,3 +316,53 @@ a:visited {
   text-align: center;
   margin: 2rem 0;
 }
+
+/* Skill switcher */
+.skill-switcher {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.switcher-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.switch-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ffbf00;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.switch-btn.active,
+.switch-btn:hover {
+  background: #ffbf00;
+  color: #fff;
+}
+
+.switcher-content {
+  position: relative;
+}
+
+.skill-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+.skill-panel .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
