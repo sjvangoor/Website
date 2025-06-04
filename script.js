@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         nl: {
             'nav-about': 'Over mij',
-            'nav-skills': 'Vaardigheden',
+            'nav-skills': 'Skills',
             'nav-projects': 'Projecten',
             'nav-ambition': 'Ambitie',
             'nav-contact': 'Contact',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'experience-text2': 'Samenwerkingen lopen uiteen van kleine bureaus tot wereldwijde consultancies, altijd met schone code en doordacht ontwerp.',
             'education-heading': 'Opleiding',
             'education-text': 'Een achtergrond in grafisch ontwerp beïnvloedt elk project en combineert esthetiek met moderne ontwikkelpraktijken.',
-            'skills-title': 'Vaardigheden',
+            'skills-title': 'Skills',
             'skills-subtitle': 'Een kort overzicht van de technologieën die Jamy gebruikt om responsieve ervaringen te bouwen.',
             'skill-uiux': 'UI/UX Ontwerp',
             'skills-text1': 'Versiebeheer met Git houdt projecten georganiseerd, terwijl buildtools zoals Webpack de uitrol stroomlijnen.',
