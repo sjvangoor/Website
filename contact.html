@@ -1,51 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Jamy Fox</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Jamy Fox</div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav-about">About me</a></li>
-                <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
-                <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-                <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
-                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-                <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
-            </ul>
-            <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">🇳🇱</button>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">&#127769;</button>
-        </nav>
-        <div class="hero-content">
-            <h1 data-i18n="contact-title">Contact</h1>
-            <p data-i18n="contact-subtitle">Jamy is always happy to talk shop. Drop a note below.</p>
-        </div>
+      <nav class="navbar">
+        <div class="logo">Jamy Fox</div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+          <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
+          <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
+          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+          <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
+        </ul>
+        <button
+          id="lang-toggle"
+          class="lang-toggle"
+          aria-label="Switch language"
+        >
+          🇳🇱
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          &#127769;
+        </button>
+      </nav>
+      <div class="hero-content">
+        <h1 data-i18n="contact-title">Contact</h1>
+        <p data-i18n="contact-subtitle">
+          Jamy is always happy to talk shop. Drop a note below.
+        </p>
+      </div>
     </header>
     <main>
-        <section class="section">
-            <form class="contact-form" onsubmit="return false;">
-                <input type="text" placeholder="Your name" data-i18n-placeholder="placeholder-name" required>
-                <input type="email" placeholder="you@example.com" data-i18n-placeholder="placeholder-email" required>
-                <textarea placeholder="Hi Jamy, I..." data-i18n-placeholder="placeholder-message" required></textarea>
-                <button type="submit" class="btn" data-i18n="send-button">Send</button>
-            </form>
-            <div class="contact-details">
-                <p data-i18n="contact-email">Email: <a href="mailto:stanvangoor@live.nl">stanvangoor@live.nl</a></p>
-                <p data-i18n="contact-linkedin">LinkedIn: <a href="https://www.linkedin.com/in/jamyfox">linkedin.com/in/jamyfox</a></p>
-            </div>
-        </section>
+      <section class="section">
+        <form class="contact-form" onsubmit="return false;">
+          <input
+            type="text"
+            placeholder="Your name"
+            data-i18n-placeholder="placeholder-name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="you@example.com"
+            data-i18n-placeholder="placeholder-email"
+            required
+          />
+          <textarea
+            placeholder="Hi Jamy, I..."
+            data-i18n-placeholder="placeholder-message"
+            required
+          ></textarea>
+          <button type="submit" class="btn" data-i18n="send-button">
+            Send
+          </button>
+        </form>
+        <div class="contact-details">
+          <p data-i18n="contact-email">
+            Email: <a href="mailto:stanvangoor@live.nl">stanvangoor@live.nl</a>
+          </p>
+          <p data-i18n="contact-linkedin">
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/jamyfox"
+              >linkedin.com/in/jamyfox</a
+            >
+          </p>
+        </div>
+      </section>
+      <div class="contact-cta">
+        <a href="contact.html" class="btn" data-i18n="contact-me">Contact me</a>
+      </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2024 Jamy Fox. All rights reserved.</p>
+      <p>&copy; 2024 Jamy Fox. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,85 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Jamy Fox</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Jamy Fox</div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav-about">About me</a></li>
-                <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
-                <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-                <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
-                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-                <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
-            </ul>
-            <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">🇳🇱</button>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">&#127769;</button>
-        </nav>
-        <div class="hero-content">
-            <h1 data-i18n="projects-title">Projects</h1>
-            <p data-i18n="projects-subtitle">A selection of recent front‑end and design projects.</p>
-        </div>
+      <nav class="navbar">
+        <div class="logo">Jamy Fox</div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+          <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
+          <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
+          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+          <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
+        </ul>
+        <button
+          id="lang-toggle"
+          class="lang-toggle"
+          aria-label="Switch language"
+        >
+          🇳🇱
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          &#127769;
+        </button>
+      </nav>
+      <div class="hero-content">
+        <h1 data-i18n="projects-title">Projects</h1>
+        <p data-i18n="projects-subtitle">
+          A selection of recent front‑end and design projects.
+        </p>
+      </div>
     </header>
     <main>
-        <section class="section">
-            <p data-i18n="projects-intro">From interactive prototypes to dynamic web apps, these examples showcase Jamy’s range.</p>
-            <div class="project-grid">
-                <a href="enterprise-dashboard.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=600&q=60" alt="Enterprise Dashboard">
-                    <h3>Enterprise Dashboard</h3>
-                </a>
-                <a href="mobile-commerce.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1523475496153-3b80ae9a75bb?auto=format&fit=crop&w=600&q=60" alt="Mobile Commerce">
-                    <h3>Mobile Commerce</h3>
-                </a>
-                <a href="marketing-website.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=600&q=60" alt="Marketing Website">
-                    <h3>Marketing Website</h3>
-                </a>
-                <a href="real-estate-portal.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=60" alt="Real Estate Portal">
-                    <h3>Real Estate Portal</h3>
-                </a>
-                <a href="analytics-app.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=60" alt="Analytics App">
-                    <h3>Analytics App</h3>
-                </a>
-                <a href="event-platform.html" class="project-card">
-                    <img src="https://images.unsplash.com/photo-1532619043317-48d1d03bdc1f?auto=format&fit=crop&w=600&q=60" alt="Event Platform">
-                    <h3>Event Platform</h3>
-                </a>
-            </div>
-        </section>
-        <section class="section">
-            <h2 data-i18n="recommendations-heading">Recommendations</h2>
-            <div class="recommendations-grid">
-                <div class="recommendation">
-                    <img src="https://images.unsplash.com/photo-1603398938378-24ab30ec06b0?auto=format&fit=crop&w=200&q=80" alt="Portrait of Alex Mason">
-                    <blockquote data-i18n="rec1-quote">&ldquo;Working with Jamy was a masterclass in collaboration. Every deliverable was thoughtful and on time.&rdquo;</blockquote>
-                    <p class="grade">★★★★★</p>
-                    <p>- Alex Mason, Product Lead</p>
-                </div>
-                <div class="recommendation">
-                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80" alt="Portrait of Priya Singh">
-                    <blockquote data-i18n="rec2-quote">&ldquo;Jamy's keen eye for design elevated our app beyond expectations. Truly a pleasure to work with.&rdquo;</blockquote>
-                    <p class="grade">★★★★★</p>
-                    <p>- Priya Singh, Creative Director</p>
-                </div>
-            </div>
-        </section>
+      <section class="section">
+        <p data-i18n="projects-intro">
+          From interactive prototypes to dynamic web apps, these examples
+          showcase Jamy’s range.
+        </p>
+        <div class="project-grid">
+          <a href="enterprise-dashboard.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=600&q=60"
+              alt="Enterprise Dashboard"
+            />
+            <h3>Enterprise Dashboard</h3>
+          </a>
+          <a href="mobile-commerce.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1523475496153-3b80ae9a75bb?auto=format&fit=crop&w=600&q=60"
+              alt="Mobile Commerce"
+            />
+            <h3>Mobile Commerce</h3>
+          </a>
+          <a href="marketing-website.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=600&q=60"
+              alt="Marketing Website"
+            />
+            <h3>Marketing Website</h3>
+          </a>
+          <a href="real-estate-portal.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=60"
+              alt="Real Estate Portal"
+            />
+            <h3>Real Estate Portal</h3>
+          </a>
+          <a href="analytics-app.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=60"
+              alt="Analytics App"
+            />
+            <h3>Analytics App</h3>
+          </a>
+          <a href="event-platform.html" class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1532619043317-48d1d03bdc1f?auto=format&fit=crop&w=600&q=60"
+              alt="Event Platform"
+            />
+            <h3>Event Platform</h3>
+          </a>
+        </div>
+      </section>
+      <section class="section">
+        <h2 data-i18n="recommendations-heading">Recommendations</h2>
+        <div class="recommendations-grid">
+          <div class="recommendation">
+            <img
+              src="https://images.unsplash.com/photo-1603398938378-24ab30ec06b0?auto=format&fit=crop&w=200&q=80"
+              alt="Portrait of Alex Mason"
+            />
+            <blockquote data-i18n="rec1-quote">
+              &ldquo;Working with Jamy was a masterclass in collaboration. Every
+              deliverable was thoughtful and on time.&rdquo;
+            </blockquote>
+            <p class="grade">★★★★★</p>
+            <p>- Alex Mason, Product Lead</p>
+          </div>
+          <div class="recommendation">
+            <img
+              src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80"
+              alt="Portrait of Priya Singh"
+            />
+            <blockquote data-i18n="rec2-quote">
+              &ldquo;Jamy's keen eye for design elevated our app beyond
+              expectations. Truly a pleasure to work with.&rdquo;
+            </blockquote>
+            <p class="grade">★★★★★</p>
+            <p>- Priya Singh, Creative Director</p>
+          </div>
+        </div>
+      </section>
+      <div class="contact-cta">
+        <a href="contact.html" class="btn" data-i18n="contact-me">Contact me</a>
+      </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2024 Jamy Fox. All rights reserved.</p>
+      <p>&copy; 2024 Jamy Fox. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
