@@ -1,6 +1,6 @@
 # Website
 
-This repository contains a polished portfolio website for **Jamy Fox**. Open `index.html` in a browser to view the About Me page. The navigation menu links to several pages:
+This repository contains a polished portfolio website for **Stan van Goor**. Open `index.html` in a browser to view the About Me page. The navigation menu links to several pages:
 
 - `index.html` – About me
 - `skills.html` – Skills
