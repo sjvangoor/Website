@@ -1,22 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Website geladen!');
+    console.log('Website loaded!');
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', evt => {
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                evt.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Simpel bericht na het "verzenden" van het formulier
+    // Simple message after sending the form
     const form = document.querySelector('.contact-form');
     if (form) {
         form.addEventListener('submit', () => {
-            alert('Bedankt! Ik neem zo snel mogelijk contact met je op.');
+            alert('Thank you! I will get back to you soon.');
             form.reset();
         });
     }
