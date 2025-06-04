@@ -203,3 +203,13 @@ body.dark {
     color: inherit;
     text-decoration: none;
 }
+
+.faq details {
+    margin-bottom: 1rem;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}

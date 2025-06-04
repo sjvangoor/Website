@@ -16,13 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark');
     }
 
+    function updateIcon() {
+        if (document.body.classList.contains('dark')) {
+            themeToggle.textContent = '☀️';
+        } else {
+            themeToggle.textContent = '🌙';
+        }
+    }
+
     // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
+        updateIcon();
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark');
             const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
+            updateIcon();
         });
     }
 });
