@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+}
+

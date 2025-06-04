@@ -1,0 +1,6 @@
+# Node modules (if any) or compiled output
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
