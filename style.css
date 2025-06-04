@@ -8,6 +8,13 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #eee;
 }
 
 .navbar {
@@ -23,21 +30,39 @@ body {
     gap: 1.5rem;
 }
 
+.theme-toggle {
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .nav-links a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
 }
+.dark .nav-links a {
+    color: #eee;
+}
 .nav-links a:hover {
     color: #5b2dff;
 }
 
 .hero {
-    background: linear-gradient(135deg, #5b2dff, #985eff);
+    background: linear-gradient(135deg, rgba(91,45,255,0.85), rgba(152,94,255,0.85)),
+        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.dark .hero {
+    background: linear-gradient(135deg, rgba(17,17,17,0.85), rgba(51,51,51,0.85)),
+        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
 }
 
 .hero-content h1 {
@@ -74,12 +99,62 @@ body {
     background-color: #f5f5f5;
 }
 
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
 .skills-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     list-style: none;
     margin-top: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+}
+
+.dark .project-card {
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .contact-form {
@@ -97,11 +172,22 @@ body {
     font-family: inherit;
 }
 
+.dark .contact-form input,
+.dark .contact-form textarea {
+    background-color: #333;
+    border-color: #555;
+    color: #eee;
+}
+
 .footer {
     text-align: center;
     padding: 2rem;
     background-color: #222;
     color: #fff;
+}
+
+.dark .footer {
+    background-color: #000;
 }
 
 .accent {
