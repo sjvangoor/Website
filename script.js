@@ -161,4 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
             updateIcon();
         });
     }
+
+    // Skill switcher
+    const switchButtons = document.querySelectorAll('.switch-btn');
+    const skillPanels = document.querySelectorAll('.skill-panel');
+    switchButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const skill = btn.getAttribute('data-skill');
+            switchButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            skillPanels.forEach(panel => {
+                if (panel.getAttribute('data-skill') === skill) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            });
+        });
+    });
 });
