@@ -9,4 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         });
     }
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+    }
 });
