@@ -24,6 +24,132 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Language toggle
+    const langToggle = document.getElementById('lang-toggle');
+
+    const translations = {
+        nl: {
+            'nav-about': 'Over mij',
+            'nav-skills': 'Vaardigheden',
+            'nav-projects': 'Projecten',
+            'nav-ambition': 'Ambitie',
+            'nav-contact': 'Contact',
+            'nav-faq': 'FAQ',
+            'index-title': 'Over mij',
+            'index-subtitle': 'Jamy Fox is een front-end ontwikkelaar die graag elegante, toegankelijke interfaces maakt. Een ontwerpachtergrond voedt zijn passie om complexe uitdagingen om te zetten in intuïtieve ervaringen.',
+            'index-cta': 'Neem contact op',
+            'biography-heading': 'Biografie',
+            'biography-text': 'Jamy heeft samengewerkt met multidisciplinaire teams aan uiteenlopende web- en mobiele projecten, steeds met focus op gebruiksvriendelijkheid en performance.',
+            'experience-heading': 'Ervaring',
+            'experience-text1': 'Met meer dan vijf jaar ervaring heeft Jamy alles gebouwd, van interactieve prototypes tot volwaardige productie-apps.',
+            'experience-text2': 'Samenwerkingen lopen uiteen van kleine bureaus tot wereldwijde consultancies, altijd met schone code en doordacht ontwerp.',
+            'education-heading': 'Opleiding',
+            'education-text': 'Een achtergrond in grafisch ontwerp beïnvloedt elk project en combineert esthetiek met moderne ontwikkelpraktijken.',
+            'skills-title': 'Vaardigheden',
+            'skills-subtitle': 'Een kort overzicht van de technologieën die Jamy gebruikt om responsieve ervaringen te bouwen.',
+            'skill-uiux': 'UI/UX Ontwerp',
+            'skills-text1': 'Versiebeheer met Git houdt projecten georganiseerd, terwijl buildtools zoals Webpack de uitrol stroomlijnen.',
+            'skills-text2': 'Jamy gebruikt ook Figma en Sketch om concepten om te zetten in verfijnde interfaces en toegankelijke gebruikersstromen.',
+            'projects-title': 'Projecten',
+            'projects-subtitle': 'Een selectie van recente front-end- en designprojecten.',
+            'projects-intro': 'Van interactieve prototypes tot dynamische webapps, deze voorbeelden tonen Jamy\u2019s veelzijdigheid.',
+            'recommendations-heading': 'Aanbevelingen',
+            'rec1-quote': 'Werken met Jamy was een masterclass in samenwerking. Elk oplevermoment was doordacht en op tijd.',
+            'rec2-quote': 'Jamys scherpe oog voor design tilde onze app naar een hoger niveau. Het was echt een plezier om mee samen te werken.',
+            'ambition-title': 'Ambitie',
+            'ambition-subtitle': 'Een kijkje in Jamy\u2019s doelen en wat dit werk drijft.',
+            'ambition-text1': 'Jamy streeft ernaar inclusieve digitale ervaringen te creëren en tegelijk de ontwikkelvaardigheden te blijven aanscherpen.',
+            'ambition-text2': 'De volgende mijlpaal is het leiden van een team dat zich richt op toegankelijke design systemen en het begeleiden van nieuwe ontwikkelaars.',
+            'ambition-text3': 'Nieuwsgierig blijven, experimenteren met nieuwe frameworks en samenwerken met creatieve vakgenoten houdt de passie levend.',
+            'contact-title': 'Contact',
+            'contact-subtitle': 'Jamy praat graag over het vak. Laat hieronder een bericht achter.',
+            'placeholder-name': 'Je naam',
+            'placeholder-email': 'jij@voorbeeld.nl',
+            'placeholder-message': 'Hoi Jamy, ik...',
+            'send-button': 'Verstuur',
+            'contact-email': 'E-mail:',
+            'contact-linkedin': 'LinkedIn:',
+            'faq-title': 'FAQ',
+            'faq-subtitle': 'Antwoorden op een aantal veelgestelde vragen over Jamy\u2019s werk.',
+            'faq-q1': 'Welke diensten bied je aan?',
+            'faq-a1': 'Ik ben gespecialiseerd in front-end ontwikkeling, UI/UX design en toegankelijkheidsaudits.',
+            'faq-q2': 'Waar ben je gevestigd?',
+            'faq-a2': 'Ik ben gevestigd in Amsterdam maar werk samen met klanten over de hele wereld.',
+            'faq-q3': 'Hoe kunnen we samen een project starten?',
+            'faq-a3': 'Neem contact op via de contactpagina met details over je idee en ik neem contact op.',
+            'enterprise-subtitle': 'Een datarijke portal voor realtime zakelijke inzichten.',
+            'enterprise-desc-heading': 'Beschrijving',
+            'enterprise-desc-text': 'Dit dashboard bundelt belangrijke statistieken van verschillende afdelingen en geeft leidinggevenden een duidelijk overzicht van de bedrijfsresultaten.',
+            'enterprise-rec-quote': 'Jamy leverde een robuuste interface waar ons team dagelijks op vertrouwt. De aandacht voor detail was uitstekend.',
+            'marketing-subtitle': 'Een moderne site die een nieuwe productlancering toont.',
+            'marketing-desc-heading': 'Beschrijving',
+            'marketing-desc-text': 'Deze single-page site combineert vloeiende animaties met pakkende teksten om de nieuwste service van een klant te belichten.',
+            'marketing-rec-quote': 'De nieuwe site vangt ons merk perfect en laadt ontzettend snel. Prachtig werk!',
+            'realestate-subtitle': 'Zoek en vergelijk aanbiedingen met gemak.',
+            'realestate-desc-heading': 'Beschrijving',
+            'realestate-desc-text': 'Een online marktplaats die kopers verbindt met makelaars, inclusief interactieve kaarten en filtertools.',
+            'realestate-rec-quote': 'Het portaal ziet er fantastisch uit en is ongelooflijk eenvoudig te navigeren. Jamy overtrof onze verwachtingen.',
+            'mobile-subtitle': 'Een intuïtieve winkelervaring gebouwd voor telefoons.',
+            'mobile-desc-heading': 'Beschrijving',
+            'mobile-desc-text': 'Een responsieve e-commerceapp met een veilige checkout en naadloos productoverzicht op alle apparaten.',
+            'mobile-rec-quote': 'Jamy creëerde een mobiele shop waar onze klanten dol op zijn. De verkoop steeg direct na de lancering.',
+            'analytics-subtitle': 'Ruwe data omzetten in bruikbare grafieken.',
+            'analytics-desc-heading': 'Beschrijving',
+            'analytics-desc-text': 'Een lichte app die KPI\u2019s voor kleine bedrijven visualiseert, inclusief exporteerbare rapporten en aangepaste dashboards.',
+            'analytics-rec-quote': 'Jamy begreep onze eisen snel en leverde een strak interface waar onze klanten lovend over zijn.',
+            'event-subtitle': 'Publiek verbinden met onvergetelijke ervaringen.',
+            'event-desc-heading': 'Beschrijving',
+            'event-desc-text': 'Een schaalbaar eventmanagementsysteem dat kaartverkoop, schema\'s en netwerkmogelijkheden voor deelnemers ondersteunt.',
+            'event-rec-quote': 'Van concept tot lancering zorgde Jamy\'s professionaliteit ervoor dat onze conferentie een succes was.',
+            'duration-heading': 'Duur',
+            'recommendation-heading': 'Aanbeveling',
+            'contact-me': 'Neem contact op'
+        }
+    };
+
+    const englishTexts = {};
+    const englishPlaceholders = {};
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        englishTexts[el.getAttribute('data-i18n')] = el.textContent;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        englishPlaceholders[el.getAttribute('data-i18n-placeholder')] = el.getAttribute('placeholder');
+    });
+
+    function applyTranslations(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (lang === 'nl') {
+                if (translations.nl[key]) el.textContent = translations.nl[key];
+            } else {
+                el.textContent = englishTexts[key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (lang === 'nl') {
+                if (translations.nl[key]) el.setAttribute('placeholder', translations.nl[key]);
+            } else {
+                el.setAttribute('placeholder', englishPlaceholders[key]);
+            }
+        });
+        if (langToggle) {
+            langToggle.textContent = lang === 'nl' ? '🇬🇧' : '🇳🇱';
+        }
+    }
+
+    const storedLang = localStorage.getItem('lang') || 'en';
+    applyTranslations(storedLang);
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const newLang = (localStorage.getItem('lang') || 'en') === 'en' ? 'nl' : 'en';
+            localStorage.setItem('lang', newLang);
+            applyTranslations(newLang);
+        });
+    }
+
     // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
