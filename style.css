@@ -50,12 +50,12 @@ body.dark {
   color: #eee;
 }
 .nav-links a:hover {
-  color: #f2c811;
+  color: #F4C430;
 }
 
 .hero {
   background:
-    linear-gradient(135deg, rgba(242, 200, 17, 0.85), rgba(255, 205, 0, 0.85)),
+    linear-gradient(135deg, rgba(244, 196, 48, 0.85), rgba(252, 218, 86, 0.85)),
     url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80")
       center/cover no-repeat;
   color: #fff;
@@ -85,7 +85,7 @@ body.dark {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background: #fff;
-  color: #f2c811;
+  color: #F4C430;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
@@ -95,7 +95,7 @@ body.dark {
     color 0.3s ease;
 }
 .btn:hover {
-  background: #f2c811;
+  background: #F4C430;
   color: #fff;
 }
 
@@ -199,7 +199,7 @@ body.dark {
 }
 
 .accent {
-  color: #f2c811;
+  color: #F4C430;
 }
 
 .contact-details {
@@ -235,4 +235,42 @@ body.dark {
   cursor: pointer;
   font-weight: 600;
   margin-bottom: 0.25rem;
+}
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recommendation {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.dark .recommendation {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.recommendation img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.recommendation blockquote {
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.recommendation .grade {
+  color: #F4C430;
+  font-weight: 600;
+  margin-top: 0.5rem;
 }
