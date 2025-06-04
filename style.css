@@ -19,6 +19,20 @@ body.dark {
   color: #eee;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #F4C430;
+}
+
+a:visited {
+  color: inherit;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -285,4 +299,9 @@ body.dark {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1.5rem;
+}
+
+.contact-cta {
+  text-align: center;
+  margin: 2rem 0;
 }
