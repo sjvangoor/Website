@@ -10,26 +10,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="navbar">
+        <div class="logo">Stan van Goor</div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+          <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
+          <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
+          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+          <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
+        </ul>
+        <button
+          id="lang-toggle"
+          class="lang-toggle"
+          aria-label="Switch language"
+        >
+          🇳🇱
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          &#127769;
+        </button>
+      </nav>
     <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Stan van Goor</div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav-about">About me</a></li>
-                <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
-                <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-                <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
-                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-                <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
-            </ul>
-            <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">🇳🇱</button>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">&#127769;</button>
-        </nav>
-        <div class="hero-content">
+        <div class="hero-text">
             <h1>Mobile Commerce</h1>
             <p data-i18n="mobile-subtitle">An intuitive shopping experience built for phones.</p>
+          <a href="#main" class="btn scroll-btn">Learn more</a>
+        </div>
+            <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80" alt="Hero image" />
         </div>
     </header>
-    <main>
+    <main id="main">
         <section class="section project-detail">
             <img src="https://images.unsplash.com/photo-1523475496153-3b80ae9a75bb?auto=format&fit=crop&w=1200&q=60" alt="Mobile Commerce screenshot">
             <h2 data-i18n="mobile-desc-heading">Description</h2>
