@@ -20,6 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark");
   }
 
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+      menuToggle.textContent = menuToggle.classList.contains("active")
+        ? "✕"
+        : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("active");
+        menuToggle.textContent = "☰";
+      }),
+    );
+  }
+
   function updateIcon() {
     if (document.body.classList.contains("dark")) {
       themeToggle.textContent = "☀️";
