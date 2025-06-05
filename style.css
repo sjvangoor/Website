@@ -83,15 +83,21 @@ a:visited {
   transition: color 0.3s ease;
 }
 .dark .nav-links a {
-  color: #eee;
+  color: #fff;
+}
+.hero .nav-links a,
+.hero .logo {
+  color: #fff;
 }
 .nav-links a:hover {
   color: var(--accent);
 }
 
 .hero {
-  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
-    center/cover no-repeat;
+  background:
+    linear-gradient(rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
+      center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -100,7 +106,7 @@ a:visited {
 
 .dark .hero {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
       center/cover no-repeat;
 }
