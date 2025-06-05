@@ -241,17 +241,15 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-  // Landing page scroll transition
-  const landingHero = document.querySelector(".landing-hero");
-  const menuGrid = document.querySelector(".menu-grid");
-  if (landingHero && menuGrid) {
-    menuGrid.style.transform = "translateY(100vh)";
-    menuGrid.style.transition = "transform 0.6s ease";
+  // Landing page scroll fade
+  const heroSection = document.getElementById("hero");
+  if (heroSection) {
     window.addEventListener("scroll", () => {
-      const heroHeight = landingHero.offsetHeight;
-      const ratio = Math.min(window.scrollY / heroHeight, 1);
-      landingHero.style.opacity = String(1 - ratio);
-      menuGrid.style.transform = `translateY(${100 * (1 - ratio)}vh)`;
+      const scrollPosition = window.scrollY;
+      const fadeOutEnd = window.innerHeight / 1.5;
+      let opacity = 1 - scrollPosition / fadeOutEnd;
+      if (opacity < 0) opacity = 0;
+      heroSection.style.opacity = opacity.toString();
     });
   }
 });
