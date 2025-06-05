@@ -177,6 +177,10 @@ a:visited {
   transition: opacity 0.5s ease-out;
 }
 
+.landing-hero.faded {
+  pointer-events: none;
+}
+
 .dark .landing-hero {
   background: #000;
   color: #fff;
@@ -553,7 +557,7 @@ a:visited {
 
 #menu-blocks {
   position: relative;
-  z-index: 5;
+  z-index: 20;
   margin-top: 100vh;
 }
 
