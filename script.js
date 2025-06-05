@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Language toggle
   const langToggle = document.getElementById("lang-toggle");
 
+  let langHint;
+  let themeHint;
+
   const translations = {
     nl: {
       "nav-about": "Over mij",
@@ -185,6 +188,12 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTranslations(storedLang);
 
   if (langToggle) {
+    langToggle.setAttribute("title", "Switch language");
+    langHint = document.createElement("span");
+    langHint.id = "lang-hint";
+    langHint.className = "help-hint";
+    langHint.textContent = "\ud83c\udf10";
+    langToggle.after(langHint);
     langToggle.addEventListener("click", () => {
       const newLang =
         (localStorage.getItem("lang") || "en") === "en" ? "nl" : "en";
@@ -196,6 +205,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Theme toggle
   const themeToggle = document.getElementById("theme-toggle");
   if (themeToggle) {
+    themeToggle.setAttribute("title", "Toggle dark mode");
+    themeHint = document.createElement("span");
+    themeHint.id = "theme-hint";
+    themeHint.className = "help-hint";
+    themeHint.textContent = "\u2600";
+    themeToggle.after(themeHint);
+    themeToggle.classList.add("pulse-once");
+    setTimeout(() => themeToggle.classList.remove("pulse-once"), 3000);
     updateIcon();
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
@@ -204,6 +221,19 @@ document.addEventListener("DOMContentLoaded", () => {
       updateIcon();
     });
   }
+
+  const showHints = () => {
+    langHint?.classList.add("visible");
+    themeHint?.classList.add("visible");
+  };
+  setTimeout(showHints, 2000);
+
+  const hideHints = () => {
+    langHint?.classList.remove("visible");
+    themeHint?.classList.remove("visible");
+  };
+  document.addEventListener("scroll", hideHints, { once: true });
+  document.addEventListener("click", hideHints, { once: true });
 
   // Skill switcher
   const switchButtons = document.querySelectorAll(".switch-btn");
