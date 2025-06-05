@@ -15,13 +15,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-ugrSCP0sY1koRaSPoaqe7i0rGUNShUMHbOWcZH/5LiCFYI8aAkaI0s5momkGLumZ5qX6Ch12HaxJXhMlbL/6nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    <div id="preloader">Loading...</div>
     <header class="hero">
       <nav class="navbar">
         <div class="logo">Stan van Goor</div>
         <ul class="nav-links">
-          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="index.html" data-i18n="nav-about">Meet Stan</a></li>
           <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
           <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
           <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
@@ -31,14 +33,14 @@
           class="lang-toggle"
           aria-label="Switch language"
         >
-          🇳🇱
+          NL
         </button>
         <button
           id="theme-toggle"
           class="theme-toggle"
           aria-label="Toggle theme"
         >
-          &#127769;
+          <i class="fa-solid fa-moon"></i>
         </button>
       </nav>
       <div class="hero-content">
@@ -56,42 +58,42 @@
         </p>
         <div class="project-grid">
           <a href="enterprise-dashboard.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=600&q=60"
               alt="Enterprise Dashboard"
             />
             <h3>Enterprise Dashboard</h3>
           </a>
           <a href="mobile-commerce.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1523475496153-3b80ae9a75bb?auto=format&fit=crop&w=600&q=60"
               alt="Mobile Commerce"
             />
             <h3>Mobile Commerce</h3>
           </a>
           <a href="marketing-website.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=600&q=60"
               alt="Marketing Website"
             />
             <h3>Marketing Website</h3>
           </a>
           <a href="real-estate-portal.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=60"
               alt="Real Estate Portal"
             />
             <h3>Real Estate Portal</h3>
           </a>
           <a href="analytics-app.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=60"
               alt="Analytics App"
             />
             <h3>Analytics App</h3>
           </a>
           <a href="event-platform.html" class="project-card">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1532619043317-48d1d03bdc1f?auto=format&fit=crop&w=600&q=60"
               alt="Event Platform"
             />
@@ -103,7 +105,7 @@
         <h2 data-i18n="recommendations-heading">Recommendations</h2>
         <div class="recommendations-grid">
           <div class="recommendation">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1603398938378-24ab30ec06b0?auto=format&fit=crop&w=200&q=80"
               alt="Portrait of Alex Mason"
             />
@@ -115,7 +117,7 @@
             <p>- Alex Mason, Product Lead</p>
           </div>
           <div class="recommendation">
-            <img
+            <img loading="lazy"
               src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80"
               alt="Portrait of Priya Singh"
             />
@@ -130,7 +132,7 @@
       </section>
       <div class="contact-cta">
         <a href="contact.html" class="btn" data-i18n="contact-me"
-          >Request Consultation</a
+          >Schedule a Discovery Call</a
         >
       </div>
     </main>
