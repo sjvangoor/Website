@@ -555,6 +555,12 @@ a:visited {
   margin-top: 100vh;
 }
 
+.contact-section {
+  position: relative;
+  z-index: 20;
+  margin-top: 100vh;
+}
+
 .menu-item {
   display: flex;
   flex-direction: column;
