@@ -582,12 +582,21 @@ a:visited {
 .menu-item:hover {
   transform: translateY(-4px);
   filter: brightness(0.95);
+  color: #fff;
 }
 
 .menu-desc {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: inherit;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover .menu-desc {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-item::before {
@@ -599,8 +608,21 @@ a:visited {
   transition: opacity 0.3s ease-in-out;
 }
 
+.menu-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .menu-item:hover::before {
-  opacity: 0.75;
+  opacity: 0.6;
+}
+
+.menu-item:hover::after {
+  opacity: 1;
 }
 
 .menu-item h3,
