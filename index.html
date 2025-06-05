@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Stan van Goor</title>
+    <title>Meet Stan - Stan van Goor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,13 +15,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-ugrSCP0sY1koRaSPoaqe7i0rGUNShUMHbOWcZH/5LiCFYI8aAkaI0s5momkGLumZ5qX6Ch12HaxJXhMlbL/6nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <div id="preloader">Loading...</div>
     <header class="hero">
       <nav class="navbar">
         <div class="logo">Stan van Goor</div>
         <ul class="nav-links">
-          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="index.html" data-i18n="nav-about">Meet Stan</a></li>
           <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
           <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
           <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
@@ -31,18 +39,18 @@
           class="lang-toggle"
           aria-label="Switch language"
         >
-          🇳🇱
+          NL
         </button>
         <button
           id="theme-toggle"
           class="theme-toggle"
           aria-label="Toggle theme"
         >
-          &#127769;
+          <i class="fa-solid fa-moon"></i>
         </button>
       </nav>
       <div class="hero-content">
-        <h1 data-i18n="index-title">About Me</h1>
+        <h1 data-i18n="index-title">Meet Stan</h1>
         <p data-i18n="index-subtitle">
           Stan van Goor is a creative marketing professional with an analytical
           background. As a Marketing Data Analyst at a fast‑growing company, he
@@ -50,16 +58,17 @@
           branding and content meet.
         </p>
         <a href="contact.html" class="btn" data-i18n="index-cta"
-          >Request Consultation</a
+          >Schedule a Discovery Call</a
         >
       </div>
     </header>
     <main>
       <section class="section profile">
-        <img
+        <img loading="lazy"
           src="https://media.licdn.com/dms/image/v2/D4E03AQGHCFIkX8VBdA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725647091449?e=2147483647&v=beta&t=Xh_zDLO-pHISpGzLGcHFAYnahcSTWuNOCcuLefe6ZHY"
           alt="Portrait of Stan van Goor"
           class="profile-img"
+          loading="lazy"
         />
         <div>
           <h2 data-i18n="biography-heading">Biography</h2>
@@ -96,7 +105,7 @@
       </section>
       <div class="contact-cta">
         <a href="contact.html" class="btn" data-i18n="contact-me"
-          >Request Consultation</a
+          >Schedule a Discovery Call</a
         >
       </div>
     </main>

@@ -5,8 +5,12 @@
 }
 
 :root {
-  --accent: #c4a060;
-  --accent-hover: #b18a50;
+  --accent: #bfa76a;
+  --accent-hover: #a68f56;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -47,7 +51,27 @@ a:visited {
 .navbar {
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  transition:
+    padding 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .navbar {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .nav-links {
@@ -58,21 +82,18 @@ a:visited {
   justify-content: center;
 }
 
-.theme-toggle {
-  border: none;
-  background: none;
-  color: inherit;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 0.5rem;
-}
-
+.theme-toggle,
 .lang-toggle {
   border: none;
   background: none;
   color: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.lang-toggle {
   margin-left: 1rem;
 }
 
@@ -90,8 +111,10 @@ a:visited {
 }
 
 .hero {
-  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
-    center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
+      center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -118,23 +141,26 @@ a:visited {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
   transition:
-    background 0.3s ease,
-    color 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .btn:hover {
-  background: var(--accent-hover);
+  background: var(--accent);
   color: #fff;
+  box-shadow: 0 0 8px var(--accent);
 }
 
 .section {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .section.light {
@@ -155,6 +181,7 @@ a:visited {
   width: 180px;
   height: 180px;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .skills-list {
@@ -233,7 +260,7 @@ a:visited {
 
 .footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #222;
   color: #fff;
 }
@@ -421,4 +448,46 @@ a:visited {
 .reveal.appear {
   opacity: 1;
   transform: none;
+}
+
+/* Page transitions */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#preloader.hidden {
+  animation: fadeOut 0.4s ease forwards;
 }
