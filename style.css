@@ -4,14 +4,25 @@
   padding: 0;
 }
 
+:root {
+  --accent: #c4a060;
+  --accent-hover: #b18a50;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
 }
 
 body.dark {
@@ -26,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: #ffbf00;
+  color: var(--accent);
 }
 
 a:visited {
@@ -75,14 +86,12 @@ a:visited {
   color: #eee;
 }
 .nav-links a:hover {
-  color: #ffbf00;
+  color: var(--accent);
 }
 
 .hero {
-  background:
-    linear-gradient(135deg, rgba(244, 196, 48, 0.85), rgba(252, 218, 86, 0.85)),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80")
-      center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
+    center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -91,8 +100,8 @@ a:visited {
 
 .dark .hero {
   background:
-    linear-gradient(135deg, rgba(17, 17, 17, 0.85), rgba(51, 51, 51, 0.85)),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80")
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1500&q=80")
       center/cover no-repeat;
 }
 
@@ -109,7 +118,7 @@ a:visited {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #ffbf00;
+  background: var(--accent);
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
@@ -120,7 +129,7 @@ a:visited {
     color 0.3s ease;
 }
 .btn:hover {
-  background: #e0a500;
+  background: var(--accent-hover);
   color: #fff;
 }
 
@@ -234,7 +243,7 @@ a:visited {
 }
 
 .accent {
-  color: #ffbf00;
+  color: var(--accent);
 }
 
 .contact-details {
@@ -305,7 +314,7 @@ a:visited {
 }
 
 .recommendation .grade {
-  color: #ffbf00;
+  color: var(--accent);
   font-weight: 600;
   margin-top: 0.5rem;
 }
@@ -343,17 +352,19 @@ a:visited {
 
 .switch-btn {
   padding: 0.5rem 1rem;
-  border: 1px solid #ffbf00;
+  border: 1px solid var(--accent);
   background: transparent;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .switch-btn.active,
 .switch-btn:hover {
-  background: #ffbf00;
+  background: var(--accent);
   color: #fff;
 }
 
@@ -375,5 +386,39 @@ a:visited {
 .skill-panel .icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffbf00;
+  color: var(--accent);
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.appear {
+  opacity: 1;
+  transform: none;
 }
