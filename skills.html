@@ -27,31 +27,31 @@
       href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css"
     />
   </head>
-  <body>
-    <header class="hero">
-      <nav class="navbar">
-        <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E03AQGHCFIkX8VBdA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725647091449?e=2147483647&v=beta&t=Xh_zDLO-pHISpGzLGcHFAYnahcSTWuNOCcuLefe6ZHY" alt="Profile" class="nav-profile-img" />Stan van Goor</div>
-        <ul class="nav-links">
-          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
-          <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
-          <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <button
-          id="lang-toggle"
-          class="lang-toggle"
-          aria-label="Switch language"
-        >
-          🇳🇱
-        </button>
-        <button
-          id="theme-toggle"
-          class="theme-toggle"
-          aria-label="Toggle theme"
-        >
-          &#127769;
-        </button>
-      </nav>
+  <body class="snap-scroll">
+    <nav class="navbar">
+      <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E03AQGHCFIkX8VBdA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725647091449?e=2147483647&v=beta&t=Xh_zDLO-pHISpGzLGcHFAYnahcSTWuNOCcuLefe6ZHY" alt="Profile" class="nav-profile-img" />Stan van Goor</div>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+        <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+        <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <button
+        id="lang-toggle"
+        class="lang-toggle"
+        aria-label="Switch language"
+      >
+        🇳🇱
+      </button>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        &#127769;
+      </button>
+    </nav>
+    <header id="hero" class="hero landing-hero">
       <div class="hero-content">
         <h1 data-i18n="skills-title">Skills</h1>
         <p data-i18n="skills-subtitle">
@@ -59,9 +59,10 @@
           experiences.
         </p>
       </div>
+      <div class="scroll-indicator">Scroll &#8595;</div>
     </header>
     <main>
-      <section id="skills-blocks" class="section menu-grid skills-grid">
+      <section id="menu-blocks" class="section menu-grid skills-grid">
         <div class="menu-item" style="--bg:#f39c12;background-image:url(https://source.unsplash.com/800x600/?python)">
           <h3>Python</h3>
           <p class="menu-desc">Automation and scraping</p>
