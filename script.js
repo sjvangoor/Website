@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+  console.log("Website loaded!");
+
   // Simple message after sending the form
   const form = document.querySelector(".contact-form");
   const toast = document.getElementById("toast");
@@ -13,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const preloader = document.getElementById("preloader");
-  document.body.classList.add("fade-in");
-
   // Apply stored theme preference on load
   const storedTheme = localStorage.getItem("theme");
   if (storedTheme === "dark") {
@@ -24,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateIcon() {
     if (document.body.classList.contains("dark")) {
-      themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      themeToggle.textContent = "☀️";
     } else {
-      themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      themeToggle.textContent = "🌙";
     }
   }
 
@@ -35,16 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const translations = {
     nl: {
-      "nav-about": "Over Stan",
+      "nav-about": "Over mij",
       "nav-skills": "Skills",
       "nav-projects": "Projecten",
       "nav-ambition": "Ambitie",
       "nav-contact": "Contact",
       "nav-faq": "FAQ",
-      "index-title": "Maak kennis met Stan",
+      "index-title": "Over mij",
       "index-subtitle":
         "Stan van Goor is een creatieve marketingprofessional met een analytische achtergrond. Als Marketing Data Analist bij een snelgroeiend bedrijf vertaalt hij data naar strategische inzichten en voelt hij zich thuis op het snijvlak van data, branding en content.",
-      "index-cta": "Plan een kennismakingsgesprek",
+      "index-cta": "Vraag een consult aan",
       "biography-heading": "Biografie",
       "biography-text":
         "Gedreven door nieuwsgierigheid verbindt Stan cijfers met verhalen. Hij onderzoekt graag hoe data merken kan versterken en is een zelfstarter die inzichten omzet in actie.",
@@ -145,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Van concept tot lancering zorgde Stan's professionaliteit ervoor dat onze conferentie een succes was.",
       "duration-heading": "Duur",
       "recommendation-heading": "Aanbeveling",
-      "contact-me": "Plan een kennismakingsgesprek",
+      "contact-me": "Vraag een consult aan",
     },
   };
 
@@ -179,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     if (langToggle) {
-      langToggle.textContent = lang === "nl" ? "EN" : "NL";
+      langToggle.textContent = lang === "nl" ? "🇬🇧" : "🇳🇱";
     }
   }
 
@@ -206,30 +204,6 @@ document.addEventListener("DOMContentLoaded", () => {
       updateIcon();
     });
   }
-
-  const navbar = document.querySelector(".navbar");
-  if (navbar) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  }
-
-  document.querySelectorAll("a[href]").forEach((link) => {
-    const url = link.getAttribute("href");
-    if (url && !url.startsWith("#") && !link.hasAttribute("target")) {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.body.classList.add("fade-out");
-        setTimeout(() => {
-          window.location.href = url;
-        }, 300);
-      });
-    }
-  });
 
   // Skill switcher
   const switchButtons = document.querySelectorAll(".switch-btn");
@@ -265,11 +239,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".section, .hero-content").forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
-  });
-
-  window.addEventListener("load", () => {
-    if (preloader) {
-      preloader.classList.add("hidden");
-    }
   });
 });
