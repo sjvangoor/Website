@@ -696,6 +696,12 @@ a:visited {
   position: relative;
   z-index: 1;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* Preserve white text for visited menu items */
+.menu-item:visited {
+  color: #fff;
 }
 
 /* Responsive adjustments */
