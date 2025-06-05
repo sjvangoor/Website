@@ -141,6 +141,12 @@ a:visited {
   cursor: pointer;
 }
 
+.current-page {
+  display: none;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -163,6 +169,10 @@ a:visited {
   color: #fff;
 }
 .nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a.selected {
   color: var(--accent);
 }
 
@@ -699,6 +709,12 @@ a:visited {
   .menu-toggle {
     display: block;
     margin-left: auto;
+  }
+
+  .current-page {
+    display: block;
+    flex: 1;
+    text-align: center;
   }
 
   .nav-links {

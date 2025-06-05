@@ -22,6 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector(".nav-links");
+  const navbar = document.querySelector(".navbar");
+
+  if (navLinks && navbar) {
+    const currentPage = document.createElement("span");
+    currentPage.className = "current-page";
+    const currentPath = window.location.pathname.split("/").pop();
+    const activeLink = Array.from(navLinks.querySelectorAll("a")).find(
+      (link) => link.getAttribute("href") === currentPath,
+    );
+    if (activeLink) {
+      currentPage.textContent = activeLink.textContent;
+      activeLink.classList.add("selected");
+    }
+    navbar.insertBefore(currentPage, navLinks);
+  }
+
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
