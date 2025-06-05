@@ -555,6 +555,16 @@ a:visited {
   min-height: 100vh;
 }
 
+/* Two-column layout for skills page */
+.skills-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 #menu-blocks {
   position: relative;
   z-index: 20;
