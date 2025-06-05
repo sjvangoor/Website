@@ -132,6 +132,15 @@ a:visited {
   margin-left: 1rem;
 }
 
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -684,12 +693,24 @@ a:visited {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
   }
 
   .nav-links {
+    display: none;
+    width: 100%;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 0.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .menu-grid {
