@@ -1,56 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate Portal - Stan van Goor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Stan van Goor</div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav-about">About me</a></li>
-                <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
-                <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
-                <li><a href="ambition.html" data-i18n="nav-ambition">Ambition</a></li>
-                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-                <li><a href="faq.html" data-i18n="nav-faq">FAQ</a></li>
-            </ul>
-            <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">🇳🇱</button>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">&#127769;</button>
-        </nav>
-        <div class="hero-content">
-            <h1>Real Estate Portal</h1>
-            <p data-i18n="realestate-subtitle">Search and compare listings with ease.</p>
-        </div>
+      <nav class="navbar">
+        <div class="logo">Stan van Goor</div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav-about">About me</a></li>
+          <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
+          <li><a href="projects.html" data-i18n="nav-projects">Projects</a></li>
+          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+        <button
+          id="lang-toggle"
+          class="lang-toggle"
+          aria-label="Switch language"
+        >
+          🇳🇱
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          &#127769;
+        </button>
+      </nav>
+      <div class="hero-content">
+        <h1>Real Estate Portal</h1>
+        <p data-i18n="realestate-subtitle">
+          Search and compare listings with ease.
+        </p>
+      </div>
     </header>
     <main>
-        <section class="section project-detail">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=60" alt="Real Estate Portal screenshot">
-            <h2 data-i18n="realestate-desc-heading">Description</h2>
-            <p data-i18n="realestate-desc-text">An online marketplace connecting buyers with agents, complete with interactive maps and filtering tools.</p>
-            <h2 data-i18n="duration-heading">Duration</h2>
-            <p>October 2023 &ndash; December 2023</p>
-            <h2 data-i18n="recommendation-heading">Recommendation</h2>
+      <section class="section project-detail">
+        <img
+          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=60"
+          alt="Real Estate Portal screenshot"
+        />
+        <h2 data-i18n="realestate-desc-heading">Description</h2>
+        <p data-i18n="realestate-desc-text">
+          An online marketplace connecting buyers with agents, complete with
+          interactive maps and filtering tools.
+        </p>
+        <h2 data-i18n="duration-heading">Duration</h2>
+        <p>October 2023 &ndash; December 2023</p>
+        <h2 data-i18n="recommendation-heading">Recommendation</h2>
         <div class="recommendation">
-            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" alt="Portrait of Lee Huang">
-            <blockquote data-i18n="realestate-rec-quote">&ldquo;The portal looks fantastic and is incredibly easy to navigate. Stan exceeded our expectations.&rdquo;</blockquote>
-            <p class="grade">★★★★★</p>
-            <p>- Lee Huang, Project Manager</p>
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80"
+            alt="Portrait of Lee Huang"
+          />
+          <blockquote data-i18n="realestate-rec-quote">
+            &ldquo;The portal looks fantastic and is incredibly easy to
+            navigate. Stan exceeded our expectations.&rdquo;
+          </blockquote>
+          <p class="grade">★★★★★</p>
+          <p>- Lee Huang, Project Manager</p>
         </div>
-        </section>
-        <div class="contact-cta">
-            <a href="contact.html" class="btn" data-i18n="contact-me">Contact me</a>
-        </div>
+      </section>
+      <div class="contact-cta">
+        <a href="contact.html" class="btn" data-i18n="contact-me"
+          >Request Consultation</a
+        >
+      </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2024 Stan van Goor. All rights reserved.</p>
+      <p>&copy; 2024 Stan van Goor. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
