@@ -236,10 +236,12 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.1 },
   );
 
-  document.querySelectorAll(".section, .hero-content").forEach((el) => {
-    el.classList.add("reveal");
-    observer.observe(el);
-  });
+  document
+    .querySelectorAll(".section:not(#menu-blocks), .hero-content")
+    .forEach((el) => {
+      el.classList.add("reveal");
+      observer.observe(el);
+    });
 
   // Landing page scroll fade
   const heroSection = document.getElementById("hero");
@@ -250,6 +252,11 @@ document.addEventListener("DOMContentLoaded", () => {
       let opacity = 1 - scrollPosition / fadeOutEnd;
       if (opacity < 0) opacity = 0;
       heroSection.style.opacity = opacity.toString();
+      if (opacity === 0) {
+        heroSection.classList.add("faded");
+      } else {
+        heroSection.classList.remove("faded");
+      }
     });
   }
 });
