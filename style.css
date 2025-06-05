@@ -150,6 +150,30 @@ a:visited {
       center/cover no-repeat;
 }
 
+/* Simplified hero for landing page */
+.landing-hero {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark .landing-hero {
+  background-color: #000;
+  color: #fff;
+}
+
+.landing-hero .navbar {
+  background-color: #fff;
+}
+
+.dark .landing-hero .navbar {
+  background-color: #000;
+}
+
+.landing-hero .nav-links a,
+.landing-hero .logo {
+  color: inherit;
+}
+
 .hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
