@@ -30,7 +30,7 @@
   <body>
     <header class="hero">
       <nav class="navbar">
-        <div class="logo"><img src="https://via.placeholder.com/40" alt="Profile" class="nav-profile-img" />Stan van Goor</div>
+        <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E03AQGHCFIkX8VBdA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725647091449?e=2147483647&v=beta&t=Xh_zDLO-pHISpGzLGcHFAYnahcSTWuNOCcuLefe6ZHY" alt="Profile" class="nav-profile-img" />Stan van Goor</div>
         <ul class="nav-links">
           <li><a href="index.html" data-i18n="nav-about">About me</a></li>
           <li><a href="skills.html" data-i18n="nav-skills">Skills</a></li>
@@ -61,96 +61,30 @@
       </div>
     </header>
     <main>
-      <section class="section">
-        <div class="skill-switcher">
-          <div class="switcher-buttons">
-            <button class="switch-btn active" data-skill="tech">
-              Technical
-            </button>
-            <button class="switch-btn" data-skill="design">Design</button>
-            <button class="switch-btn" data-skill="strategy">Strategy</button>
-          </div>
-          <div class="switcher-content">
-            <div class="skill-panel active" data-skill="tech">
-              <div class="icon" aria-hidden="true">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <ul class="skills-list">
-                <li>
-                  <i class="devicon-html5-plain colored"></i
-                  ><i class="devicon-css3-plain colored"></i> HTML &amp; CSS
-                </li>
-                <li>
-                  <i class="devicon-javascript-plain colored"></i
-                  ><i class="devicon-nodejs-plain colored"></i> JavaScript &amp;
-                  Node.js
-                </li>
-                <li>
-                  <i class="devicon-react-original colored"></i> React
-                  (component-based)
-                </li>
-                <li>
-                  <i class="devicon-git-plain colored"></i> Git &amp; version
-                  control
-                </li>
-                <li>
-                  <i class="devicon-webpack-plain colored"></i
-                  ><i class="devicon-vitejs-plain colored"></i> Build tools
-                  (Webpack &amp; Vite)
-                </li>
-                <li>
-                  <i class="fa-solid fa-plug"></i> API integrations (Meta,
-                  LinkedIn, Google Ads)
-                </li>
-                <li>
-                  <i class="devicon-python-plain colored"></i
-                  ><i class="devicon-mysql-plain colored"></i> MySQL &amp;
-                  Python scraping
-                </li>
-              </ul>
-            </div>
-            <div class="skill-panel" data-skill="design">
-              <div class="icon" aria-hidden="true">
-                <i class="fa-solid fa-palette"></i>
-              </div>
-              <ul class="skills-list">
-                <li>
-                  <i class="fa-solid fa-pencil-ruler"></i> UI/UX fundamentals
-                </li>
-                <li>
-                  <i class="devicon-figma-plain colored"></i> Figma &amp; Sketch
-                  workflows
-                </li>
-                <li><i class="fa-solid fa-route"></i> User focused flows</li>
-                <li>
-                  <i class="fa-regular fa-lightbulb"></i> Branding meets
-                  interaction
-                </li>
-              </ul>
-            </div>
-            <div class="skill-panel" data-skill="strategy">
-              <div class="icon" aria-hidden="true">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <ul class="skills-list">
-                <li>
-                  <i class="fa-solid fa-chart-bar"></i> Marketing data analysis
-                </li>
-                <li>
-                  <i class="fa-solid fa-chart-pie"></i> Power BI &amp; Looker
-                  Studio
-                </li>
-                <li>
-                  <i class="fa-solid fa-gauge-high"></i> Dashboard building
-                  &amp; KPIs
-                </li>
-                <li>
-                  <i class="fa-solid fa-bullseye"></i> Tech strength with brand
-                  strategy
-                </li>
-              </ul>
-            </div>
-          </div>
+      <section id="skills-blocks" class="section menu-grid skills-grid">
+        <div class="menu-item" style="--bg:#f39c12;background-image:url(https://source.unsplash.com/800x600/?python)">
+          <h3>Python</h3>
+          <p class="menu-desc">Automation and scraping</p>
+        </div>
+        <div class="menu-item" style="--bg:#3b82f6;background-image:url(https://source.unsplash.com/800x600/?database)">
+          <h3>SQL</h3>
+          <p class="menu-desc">Data modeling</p>
+        </div>
+        <div class="menu-item" style="--bg:#ffcc00;background-image:url(https://source.unsplash.com/800x600/?data)">
+          <h3>Power BI</h3>
+          <p class="menu-desc">Interactive dashboards</p>
+        </div>
+        <div class="menu-item" style="--bg:#f0db4f;background-image:url(https://source.unsplash.com/800x600/?javascript)">
+          <h3>JavaScript</h3>
+          <p class="menu-desc">Web applications</p>
+        </div>
+        <div class="menu-item" style="--bg:#db4437;background-image:url(https://source.unsplash.com/800x600/?marketing)">
+          <h3>Google Ads</h3>
+          <p class="menu-desc">Campaign management</p>
+        </div>
+        <div class="menu-item" style="--bg:#9b59b6;background-image:url(https://source.unsplash.com/800x600/?design)">
+          <h3>Design Thinking</h3>
+          <p class="menu-desc">User-centered approach</p>
         </div>
       </section>
       <div class="contact-cta">
