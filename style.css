@@ -168,10 +168,13 @@ a:visited {
 .landing-hero {
   background: #fff;
   color: #000;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
+  transition: opacity 0.5s ease-out;
 }
 
 .dark .landing-hero {
@@ -546,6 +549,12 @@ a:visited {
   gap: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+#menu-blocks {
+  position: relative;
+  z-index: 5;
+  margin-top: 100vh;
 }
 
 .menu-item {
