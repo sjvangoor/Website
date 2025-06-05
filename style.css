@@ -168,6 +168,10 @@ a:visited {
 .landing-hero {
   background: #fff;
   color: #000;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
 }
 
 .dark .landing-hero {
