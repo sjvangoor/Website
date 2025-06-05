@@ -240,4 +240,20 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add("reveal");
     observer.observe(el);
   });
+
+  // Landing page scroll transition
+  const landingHero = document.querySelector(".landing-hero");
+  const menuGrid = document.querySelector(".menu-grid");
+  if (landingHero && menuGrid) {
+    menuGrid.style.transform = "translateY(100px)";
+    menuGrid.style.opacity = "0";
+    menuGrid.style.transition = "transform 0.6s ease, opacity 0.6s ease";
+    window.addEventListener("scroll", () => {
+      const heroHeight = landingHero.offsetHeight;
+      const ratio = Math.min(window.scrollY / heroHeight, 1);
+      landingHero.style.opacity = String(1 - ratio);
+      menuGrid.style.transform = `translateY(${100 * (1 - ratio)}px)`;
+      menuGrid.style.opacity = String(ratio);
+    });
+  }
 });
