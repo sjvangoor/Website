@@ -704,6 +704,38 @@ a:visited {
   color: #fff;
 }
 
+/* Circular menu items on landing page */
+.landing-page #menu-blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.landing-page #menu-blocks .circle-item {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--bg, #666);
+  color: var(--bg, #666);
+}
+
+.dark .landing-page #menu-blocks .circle-item {
+  color: var(--bg, #eee);
+  border-color: var(--bg, #eee);
+}
+
+.landing-page #menu-blocks .circle-item::before,
+.landing-page #menu-blocks .circle-item::after {
+  display: none;
+}
+
+.landing-page #menu-blocks .circle-item h3,
+.landing-page #menu-blocks .circle-item p {
+  text-shadow: none;
+  color: inherit;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar {
