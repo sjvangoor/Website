@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Language toggle
   const langToggle = document.getElementById("lang-toggle");
 
+  const flags = { en: "\ud83c\uddec\ud83c\udde7", nl: "\ud83c\uddf3\ud83c\uddf1" };
+  const languageNames = { en: "English", nl: "Nederlands" };
+
   let langHint;
   let themeHint;
 
@@ -215,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     if (langToggle) {
-      langToggle.textContent = lang === "nl" ? "🇬🇧" : "🇳🇱";
+      langToggle.textContent = flags[lang];
     }
   }
 
@@ -223,17 +226,41 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTranslations(storedLang);
 
   if (langToggle) {
-    langToggle.setAttribute("title", "Switch language");
+    langToggle.setAttribute("title", "Select language");
     langHint = document.createElement("span");
     langHint.id = "lang-hint";
     langHint.className = "help-hint";
     langHint.textContent = "\ud83c\udf10";
     langToggle.after(langHint);
+
+    const langMenu = document.createElement("ul");
+    langMenu.id = "lang-menu";
+    langMenu.className = "lang-menu";
+    Object.keys(languageNames).forEach((code) => {
+      const li = document.createElement("li");
+      li.dataset.lang = code;
+      li.textContent = `${flags[code]} ${languageNames[code]}`;
+      langMenu.appendChild(li);
+    });
+    langHint.after(langMenu);
+
     langToggle.addEventListener("click", () => {
-      const newLang =
-        (localStorage.getItem("lang") || "en") === "en" ? "nl" : "en";
-      localStorage.setItem("lang", newLang);
-      applyTranslations(newLang);
+      langMenu.classList.toggle("open");
+    });
+
+    langMenu.addEventListener("click", (e) => {
+      const selected = e.target.getAttribute("data-lang");
+      if (selected) {
+        localStorage.setItem("lang", selected);
+        applyTranslations(selected);
+        langMenu.classList.remove("open");
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+        langMenu.classList.remove("open");
+      }
     });
   }
 

@@ -130,6 +130,37 @@ a:visited {
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 1rem;
+  position: relative;
+}
+
+.lang-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: none;
+  z-index: 1001;
+}
+.dark .lang-menu {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #444;
+}
+.lang-menu li {
+  padding: 0.25rem 0.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.lang-menu li:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+.lang-menu.open {
+  display: block;
 }
 
 .menu-toggle {
@@ -748,6 +779,15 @@ a:visited {
   .lang-toggle,
   .theme-toggle {
     display: none;
+  }
+
+  .lang-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    text-align: center;
+    margin-top: 0.5rem;
+    order: 5;
   }
 
   .nav-links.active + .lang-toggle,
