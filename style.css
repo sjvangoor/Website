@@ -844,3 +844,42 @@ a:visited {
     height: 300px;
   }
 }
+
+/* Partner logo slider */
+.partner-bar {
+  background-color: #f3e9ff;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.dark .partner-bar {
+  background-color: #2d1b3a;
+}
+
+.partner-track {
+  display: flex;
+  width: max-content;
+  animation: partner-scroll 25s linear infinite;
+}
+
+.partner-track img {
+  height: 50px;
+  margin: 0 2rem;
+  width: auto;
+}
+
+@keyframes partner-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-track img {
+    height: 40px;
+    margin: 0 1rem;
+  }
+}
