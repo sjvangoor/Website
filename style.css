@@ -221,6 +221,12 @@ a:visited {
   object-fit: cover;
 }
 
+.nav-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .hero {
   background:
     linear-gradient(rgba(196, 160, 96, 0.7), rgba(196, 160, 96, 0.7)),
